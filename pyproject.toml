@@ -1,0 +1,27 @@
+[project]
+name = "aula-python"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Diego Felipe",email = "fdiego039@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.12,<4.0"
+dependencies = [
+    "flask",
+    "flask-sqlalchemy",
+    "flask-migrate",
+    "flask-jwt-extended",
+    "pytest",
+    "pytest-mock",
+    "psycopg2-binary",
+    "gunicorn",
+]
+
+[tool.pytest.ini_options]
+addopts = "-vvv"
+testpaths = ["tests"]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
